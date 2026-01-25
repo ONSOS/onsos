@@ -1,80 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O.N.S. Outsourcing Solutions - Premium Services</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">O.N.S. Solutions</div>
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero">
-        <div class="container">
-            <h1>Elevate Your Experience with O.N.S.</h1>
-            <p>Unparalleled quality and exceptional results that set us apart.</p>
-            <a href="#contact" class="btn">Get a Consultation</a>
-        </div>
-    </section>
-
-    <section id="services">
-        <div class="container">
-            <h2>Our Premium Services</h2>
-            <div class="service-grid">
-                <div class="service-item">
-                    <h3>Accounting & Taxation</h3>
-                    <p>Deliver reliable, cost-effective accounting and tax compliance solutions.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Hiring & Recruitment</h3>
-                    <p>Streamline your staffing and recruitment needs with expert HR support.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Digital Marketing</h3>
-                    <p>Drive growth through professional social media management and advertising.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The about and contact sections below still need their main text customized -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" rows="4"></textarea>
-                <button type="submit" class="btn">Send Inquiry</button>
-            </form>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
 <html lang="en" class="scroll-smooth antialiased">
 <head>
-  <!-- ==== Essential meta ==== -->
+  <!-- ==================== META ==================== -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ONSOS – Modern Professional Site</title>
+  <title>Your Consulting Firm – Modern Professional</title>
 
-  <!-- ==== SEO / Social ==== -->
-  <meta name="description" content="A modern, professional portfolio for ONSOS. Crafted with clean design, vibrant accents, and friendly typography." />
-  <meta property="og:title" content="ONSOS – Modern Professional Site" />
-  <meta property="og:description" content="Explore our services, see our work,
+  <!-- SEO / Social -->
+  <meta name="description"
+        content="A modern consulting practice delivering data‑driven results. Built with a bold brand identity and vibrant design." />
+  <meta property="og:title" content="Your Consulting Firm – Modern Professional">
+  <meta property="og:description"
+        content="Strategic consulting built for impact. See our work and get in touch." />
+  <meta property="og:image" content="https://example.com/og-image.jpg"> <!-- ← replace -->
+  <meta property="og:url" content="https://example.com/">
+  <meta name="twitter:card" content="summary_large_image">
 
+  <!-- ==================== FONT (Inter – used by top firms) ==================== -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- ==================== TAILWIND (CDN) ==================== -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // -----------------------------------------------------------------
+            //  👉  EDIT THE TWO LINES BELOW WITH YOUR BRAND COLORS
+            // -----------------------------------------------------------------
+            primary: {
+              DEFAULT: "var(--clr-primary)",          // main brand colour
+              dark: "var(--clr-primary-dark)",        // hover / darker variant
+            },
+            gradientPrimary: {
+              default: "linear-gradient(135deg, var(--clr-primary) 0%, #6654a3 100%)",
+            },
+          },
+          fontFamily: {
+            heading: ["'Inter'", "system-ui", "sans-serif"],
+            body:    ["'Inter'", "system-ui", "sans-serif"],
+          },
+          spacing: {
+            "9": "2.25rem",   /* extra padding utilities */
+          },
+          borderRadius: {
+            xl: "1rem",
+          },
+        },
+        safelist: [
+          "bg-gradient-primary",
+          "hover:from-indigo-500 hover:to-purple-500",
+        ],
+      },
+    };
+  </script>
+
+  <!-- ==================== COLOUR VARIABLES (edit the hexes) ==================== -->
+  <style>
+    :root {
+      --clr-primary:       #0066ff;          /* ← YOUR MAIN BRAND COLOR */
+      --clr-primary-dark:  #004ecc;          /* ← DARKER VARIANT (hover) */
+      --clr-bg-light:      #fafafa;          /* page background */
+      --clr-bg-dark:       #212529;          /* footer / heading text */
+      --clr-text-light:    #ffffff;          /* links, CTA text */
+      --clr-muted-text:    #6c757d;          /* paragraph text */
+    }
+
+    /* Tiny reset – keep or replace */
+    *, *::before, *::after { box-sizing:border-box; }
+    body { line-height:1.5; margin:0; padding:0;
+           font-family:var(--font-body,'Inter',system-ui,sans-serif);
+           background-color:var(--clr-bg-light); color:var(--clr-text-primary); }
+    img { max-width:100%; height:auto; display:block; }
+    a { color:inherit; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+  </style>
+</head>
+
+<body class="min-h-screen flex flex-col text-clr-text-light">
+
+  <!-- ==================== NAVIGATION (fixed) ==================== -->
+  <nav id="top-nav"
+       class="fixed top-0 left-0 w-full z-50 bg-white/90 shadow-md px-4 py-3 flex items-center justify-between transition-colors duration-300">
+    <!-- LOGO / BRAND LEFT -->
+    <a href="#home" class="text-xl font-bold text-clr-primary-dark">YourCo</a>
+
+    <!-- DESKTOP MENU -->
+    <div class="hidden md:flex space-x-4 items-center">
+      <a href="#home"    class="text-clr-muted-text hover:text-primary transition-colors">Home</a>
+      <a href="#services" class="text-clr-muted-text hover:text-primary transition-colors">Services</a>
+      <a href="#portfolio" class="text-clr-muted-text hover:text-primary transition-colors">Portfolio</a>
+      <a href="#about"   class="text-clr-muted-text hover:text-primary transition-colors">About</a>
+      <a href="#contact" class="text-clr-muted-text hover:text-primary transition-colors">Contact</a>
+    </div>
+
+    <!-- MOBILE MENU TOGGLER -->
+    <button class="md:hidden focus:outline-none flex flex-col justify-center">
+      <svg class="w-6 h-6 text-clr-muted-text" fill="none" stroke="currentColor"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU (collapsed) -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+    <nav class="px-4 py-3 space-y-2">
+      <a href="#home"    class="text-clr-text-dark hover:text-primary block px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+      <a href="#services" class="text-clr-text-dark hover:text-primary block px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
+      <a href="#portfolio" class="text-clr-text-dark hover:text-primary block px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
+      <a href="#about"   class="text-clr-text-dark hover:text-primary block px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
+      <a href="#contact" class="text-clr-text-dark hover:text-primary block px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+    </nav>
+  </div>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="home" class="relative flex-1 overflow-hidden bg-white">
+    <!-- HERO IMAGE – replace with your own (WebP/AVIF recommended) -->
+    <img src="https://images.unsplash.com/photo-1521971536126-0ff1fdc290c8?auto=format&fit=crop&w=1568&q=80"
+         alt="Modern consulting hero"
+         class="absolute inset-0 w-full h-full object-cover opacity-80" />
+    <!-- Dark gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent"></div>
+
+    <div class="relative max-w-3xl mx-auto px-4 py-20 flex flex-col items-center text-center text-white">
+      <h1 class="text-5xl md:text-6xl font-bold drop-shadow-lg mb-3">
+        Changing the Way the World Works
+      </h1>
+      <p class="text-lg md:text-xl max-w-2xl drop-shadow mb-8">
+        Strategic consulting that turns bold ideas into measurable results.
+      </p>
+
+      <!-- Primary CTA -->
+      <a href="#services"
+         class="inline-block bg-gradient-primary hover:from-indigo-500 hover:to-purple-500 text-white font-medium rounded-lg px-8 py-3 shadow-md transition-colors">
+        See Our Work
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES GRID ==================== -->
+  <section id="services" class="py-20 bg-gradientPrimary/5 from-gradientPrimary/10">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-clr-primary-dark mb-12">
+        What We Do
+      </h2>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- SERVICE CARD 1 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow hover:transform hover:scale-105">
+          <div class="flex items-center justify-center mb-4">
+            <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a9 9 0 0 0-9 9c0 5 4 9 9 9v2c-3.33 0-6-2.67-6-6 0-1.73.8-3.21 2-4.22v-2c3 0 6-3 6-6a9 9 0 0 0-9-9zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-primary-dark mb-2">Strategy</h3>
+          <p class="text-clr-muted-text">Design data‑driven road‑maps that accelerate growth.</p>
+        </div>
+
+        <!-- SERVICE CARD 2 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow hover:transform hover:scale-105">
+          <div class="flex items-center justify-center mb-4">
+            <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2a10 10 0 0 0-10 10c0 4.97 4.03 9 9 9v2c-2.5 0-4.76-1.55-5.66-3.57l.71.71C9.76 21 12.99 24 14 24h6c.44 0 .84-.13 1.21-.35l.71.71C21.76 24 24 21 24 14v-6c0-3.33-2.67-6-6-6V2a10 10 0 0 0-10-10z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-primary-dark mb-2">Technology</h3>
+          <p class="text-clr-muted-text">Build scalable platforms that power tomorrow’s business.</p>
+        </div>
+
+        <!-- SERVICE CARD 3 -->
+        <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow hover:transform hover:scale-105">
+          <div class="flex items-center justify-center mb-4">
+            <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20 4H4c-0.55 0-1 0.45-1 1v14c
