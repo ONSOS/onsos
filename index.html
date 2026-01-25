@@ -176,4 +176,188 @@
         <div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-shadow hover:transform hover:scale-105">
           <div class="flex items-center justify-center mb-4">
             <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20 4H4c-0.55 0-1 0.45-1 1v14c
+              <path d="M20 4H4c-0.55 0-1 0.45-1 1v14c0 0.55 0.45 1 1 1h16c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1zM4 7v10h16V7H4zm2 3 3-3 3 3v6h-2V10zm5 5h-2v6h2v-6H7v-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-primary-dark mb-2">Design</h3>
+          <p class="text-clr-muted-text">Craft intuitive experiences that turn visitors into clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PORTFOLIO / CASE STUDIES ==================== -->
+  <section id="portfolio" class="py-20 bg-light">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-primary-dark mb-12">
+        Recent Impact
+      </h2>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Project Card 1 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519608483587-85a1b37bab57?auto=format&fit=crop&w=600&q=80"
+               alt="Project screenshot"
+               class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-primary-dark mb-1">Digital Transformation for a Fortune‑500 Bank</h3>
+            <p class="text-clr-muted-text mb-2">Reduced processing time by 38 % and saved $2.3 M annually.</p>
+            <a href="#" class="inline-block text-primary hover:underline mt-2">Read Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1522199670076-2852f80289e4?auto=format&fit=crop&w=600&q=80"
+               alt="Project screenshot"
+               class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-primary-dark mb-1">AI‑Powered Forecasting for a Retail Chain</h3>
+            <p class="text-clr-muted-text mb-2">Improved demand accuracy from 68 % to 92 %.</p>
+            <a href="#" class="inline-block text-primary hover:underline mt-2">Read Case Study</a>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542291694-5a6958d72558?auto=format&fit=crop&w=600&q=80"
+               alt="Project screenshot"
+               class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-primary-dark mb-1">Customer Experience Redesign</h3>
+            <p class="text-clr-muted-text mb-2">Increased Net Promoter Score from 31 to 48.</p>
+            <a href="#" class="inline-block text-primary hover:underline mt-2">Read Case Study</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT / TEAM ==================== -->
+  <section id="about" class="py-20 bg-light">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="max-w-md text-center md:mr-8 mb-8 md:mb-0">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary-dark mb-4">
+          About Us
+        </h2>
+        <p class="text-clr-muted-text mb-6">
+          We are a boutique consulting practice that blends deep industry expertise with cutting‑edge analytics to solve our clients’ hardest problems.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-sm text-clr-muted-text">
+          <li><strong>Location:</strong> New York, USA</li>
+          <li><strong>Founded:</strong> 2021</li>
+          <li><strong>Team size:</strong> 12 consultants</li>
+          <li><strong>Tech stack:</strong> Python, React, Tableau</li>
+        </ul>
+        <a href="#contact"
+           class="inline-block mt-6 bg-gradient-primary hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg px-5 py-2 transition-colors">
+          Get in Touch
+        </a>
+      </div>
+
+      <div class="flex-1 max-w-lg">
+        <!-- TEAM PORTRAIT – replace with your own photo -->
+        <img src="https://images.unsplash.com/photo-159506D369748-2s95bcdb112e?auto=format&fit=crop&w=300&q=80"
+             alt="Team photo"
+             class="w-full h-96 rounded-xl shadow-lg" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT FORM ==================== -->
+  <section id="contact" class="py-20 bg-clr-bg-dark text-white">
+    <div class="container mx-auto px-4 max-w-xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        Let’s Build the Future Together
+      </h2>
+
+      <form class="mx-auto w-full bg-white bg-opacity-90 rounded-xl p-8 shadow-lg">
+        <div class="mb-4 flex flex-col">
+          <label class="mb-1 text-sm font-medium text-clr-primary-dark">Your Name</label>
+          <input type="text" name="name" required
+                 class="border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white"/>
+        </div>
+
+        <div class="mb-4 flex flex-col">
+          <label class="mb-1 text-sm font-medium text-clr-primary-dark">Email</label>
+          <input type="email" name="email" required
+                 class="border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white"/>
+        </div>
+
+        <div class="mb-6 flex flex-col">
+          <label class="mb-1 text-sm font-medium text-clr-primary-dark">Message</label>
+          <textarea rows="5" name="message" required
+                    class="border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary bg-white resize-none"></textarea>
+        </div>
+
+        <button type="submit"
+                class="w-full bg-gradient-primary hover:from-indigo-500 hover:to-purple-500 text-white font-medium rounded-lg py-3 transition-colors">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-clr-bg-dark text-clr-muted-text py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- LEFT – LEGAL & SOCIAL -->
+      <div>
+        <p class="text-sm">© 2025 YourCo. All rights reserved.</p>
+        <p class="mt-2 text-xs">
+          Follow us on
+          <a href="#" class="text-gray-400 hover:text-white underline">Twitter</a>,
+          <a href="#" class="text-gray-400 hover:text-white underline">LinkedIn</a>.
+        </p>
+      </div>
+
+      <!-- MIDDLE – QUICK LINKS -->
+      <div class="text-center md:text-left">
+        <p class="text-sm font-medium">Quick Links</p>
+        <ul class="mt-1 space-y-1 text-sm">
+          <li><a href="#home"    class="text-gray-400 hover:text-white">Home</a></li>
+          <li><a href="#services" class="text-gray-400 hover:text-white">Services</a></li>
+          <li><a href="#portfolio" class="text-gray-400 hover:text-white">Portfolio</a></li>
+          <li><a href="#about"   class="text-gray-400 hover:text-white">About</a></li>
+          <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT – COPYRIGHT -->
+      <div class="text-center md:text-right">
+        <p class="text-sm">© 2025 <strong>YourCo</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== LITTLE JS FOR MOBILE MENU & SCROLL EFFECTS ==================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Toggle mobile menu
+      const menuBtn = document.querySelector("#top-nav button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+      }
+
+      // Optional: change nav background after scrolling down a bit
+      const nav = document.getElementById("top-nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) nav.classList.add("bg-white/90");
+        else nav.classList.remove("bg-white/90");
+      });
+    });
+  </script>
+
+  <!-- ==================== GOOGLE ANALYTICS (optional) ==================== -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXX-X');
+  </script>
+  -->
+</body>
+</html>
