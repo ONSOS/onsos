@@ -6,3 +6,4 @@ Hiring & Recruitment
 Digital Marketing (Social media management and advertising)
 Payroll Management and other IT-enabled services.
 O.N.S. operates with a mission "To empower businesses by delivering reliable, cost-effective, and scalable outsourcing services that drive growth, efficiency and reduce overhead costs". Their operational plan combines skilled professionals, robust Standard Operating Procedures (SOPs), and advanced cloud-based technology to ensure security, compliance, and seamless service delivery.
+[ONSOS BUP (1).pdf](https://github.com/user-attachments/files/24842174/ONSOS.BUP.1.pdf)
