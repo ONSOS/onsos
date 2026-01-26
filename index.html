@@ -1,217 +1,354 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth antialiased">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Consulting Firm – Premium Gold Brand</title>
-  <meta name="description" content="Premium consulting services delivered with expertise, data-driven insight and a splash of gold.">
-  <meta property="og:title" content="Your Consulting Firm – Premium Gold Brand">
-  <meta property="og:description" content="A high‑impact consulting practice that blends strategy, technology and gold‑standard execution.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1521754582882-8493e9bd51a6?auto=format&fit=crop&w=1200&q=80"> <!-- EDIT -->
-  <meta property="og:url" content="https://example.com/">
-  <meta name="twitter:card" content="summary_large_image">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <title>O.N.S. Outsourcing Solutions | Global Efficiency</title>
+  <meta name="description" content="O.N.S. Outsourcing Solutions provides premium BPO, IT, and administrative services to scale your business.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: {
-            gold: {
-              50: '#fff8e1',100: '#fff3c1',200: '#ffeb99',300: '#ffd76b',400: '#ffc43d',
-              500: '#ffb10b',600: '#ffa000',700: '#cc8b00',800: '#996b00',900: '#664e00'
-            },
-            dark: {900: '#1a1a40'}
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
           },
-          gradient: {gold: 'linear-gradient(135deg, #ffb10b 0%, #cc8b00 100%)'},
-          fontFamily: {heading: ['Inter','system-ui','sans-serif'], body: ['Inter','system-ui','sans-serif']},
-          boxShadow: {lg: '0 10px 25px -5px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.1)'},
-          spacing: {10: '2.5rem'}, borderRadius: {xl: '1.25rem'}
-        },
-        safelist: ['bg-gold-500','bg-gold-600','hover:bg-gold-700','text-white','bg-black-900','shadow-lg']
+          colors: {
+            brand: {
+              dark: '#0f172a',    // Deep Slate Blue
+              primary: '#3b82f6', // Bright Blue
+              accent: '#8b5cf6',  // Violet
+              vibrant: '#06b6d4', // Cyan
+            }
+          },
+          backgroundImage: {
+            'hero-pattern': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80')",
+            'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            'vibrant-gradient': 'linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #8b5cf6 100%)',
+          }
+        }
       }
     }
   </script>
   <style>
-    :root{--gold-primary:#ffb10b;--gold-dark:#cc8b00;--bg-dark:#1a1a40;--text-light:#fff;--text-muted:#f0f0f0}
-    *{box-sizing:border-box}
-    body{margin:0;padding:0;font-family:var(--font-body,'Inter',system-ui,sans-serif);background:#f5f5f5;color:var(--text-light);}
-    img{max-width:100%;height:auto;display:block}
-    a{color:inherit;text-decoration:none}
-    a:hover{text-decoration:underline}
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #0f172a; }
+    ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #06b6d4; }
+    
+    /* Glassmorphism Utilities */
+    .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .glass-light {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    /* Animation classes */
+    .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.3); }
   </style>
 </head>
-<body class="min-h-screen flex flex-col text-white">
+<body class="bg-brand-dark text-slate-200 antialiased selection:bg-brand-vibrant selection:text-white">
 
-<nav id="top-nav" class="fixed top-0 left-0 w-full z-50 bg-white/90 shadow-md px-4 py-3 flex items-center justify-between transition-colors duration-300 bg-white">
-  <a href="#home" class="text-2xl font-bold text-dark">YourCo</a>
-  <div class="hidden md:flex space-x-6 items-center">
-    <a href="#home"    class="text-dark hover:text-gold-500 transition-colors font-medium">Home</a>
-    <a href="#services" class="text-dark hover:text-gold-500 transition-colors font-medium">Services</a>
-    <a href="#portfolio" class="text-dark hover:text-gold-500 transition-colors font-medium">Portfolio</a>
-    <a href="#about"   class="text-dark hover:text-gold-500 transition-colors font-medium">About</a>
-    <a href="#contact" class="text-dark hover:text-gold-500 transition-colors font-medium">Contact</a>
-  </div>
-  <button class="md:hidden focus:outline-none flex flex-col justify-center">
-    <svg class="w-7 h-7 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-    </svg>
-  </button>
-</nav>
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 border-b border-transparent py-4">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <a href="#" class="text-2xl font-heading font-bold text-white tracking-tight flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-vibrant-gradient flex items-center justify-center text-white text-sm font-bold shadow-lg">ONS</div>
+        O.N.S. <span class="text-brand-vibrant font-light">Solutions</span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#services" class="text-sm font-medium hover:text-brand-vibrant transition-colors">Services</a>
+        <a href="#impact" class="text-sm font-medium hover:text-brand-vibrant transition-colors">Impact</a>
+        <a href="#about" class="text-sm font-medium hover:text-brand-vibrant transition-colors">About</a>
+        <a href="#contact" class="px-5 py-2.5 rounded-full bg-white text-brand-dark font-bold text-sm hover:bg-brand-vibrant hover:text-white transition-all shadow-lg hover:shadow-cyan-500/50">
+          Get a Quote
+        </a>
+      </div>
 
-<div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
-  <nav class="px-4 py-3 space-y-2">
-    <a href="#home"    class="block hover:bg-gold-50 text-dark px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
-    <a href="#services" class="block hover:bg-gold-50 text-dark px-3 py-2 rounded-md text-sm font-medium transition-colors">Services</a>
-    <a href="#portfolio" class="block hover:bg-gold-50 text-dark px-3 py-2 rounded-md text-sm font-medium transition-colors">Portfolio</a>
-    <a href="#about"   class="block hover:bg-gold-50 text-dark px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
-    <a href="#contact" class="block hover:bg-gold-50 text-dark px-3 py-2 rounded-md text-sm font-medium transition-colors">Contact</a>
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-dark border-b border-white/10 p-4 flex flex-col space-y-4 md:hidden">
+      <a href="#services" class="block text-center py-2 hover:bg-white/5 rounded-lg">Services</a>
+      <a href="#impact" class="block text-center py-2 hover:bg-white/5 rounded-lg">Impact</a>
+      <a href="#about" class="block text-center py-2 hover:bg-white/5 rounded-lg">About</a>
+      <a href="#contact" class="block text-center py-2 bg-brand-vibrant text-white font-bold rounded-lg">Contact Us</a>
+    </div>
   </nav>
-</div>
 
-<section id="home" class="relative flex-1 overflow-hidden bg-dark">
-  <img src="https://images.unsplash.com/photo-1521754582882-8493e9bd51a6?auto=format&fit=crop&w=1300&q=80" alt="Premium consulting hero" class="absolute inset-0 w-full h-full object-cover opacity-80">
-  <div class="absolute inset-0 bg-black/60"></div>
-  <div class="relative max-w-3xl mx-auto px-4 py-20 flex flex-col items-center text-center text-white">
-    <h1 class="text-5xl md:text-7xl font-bold drop-shadow-lg mb-3">Transforming Businesses with Gold‑Standard Insight</h1>
-    <p class="text-lg md:text-xl max-w-2xl drop-shadow mb-8">
-      Strategy, technology and execution delivered with expertise, data‑driven insight and a splash of gold.
-    </p>
-    <a href="#services" class="inline-block bg-gold-500 hover:bg-gold-600 text-white font-medium rounded-xl px-10 py-3 shadow-lg transition-colors">See Our Work</a>
-  </div>
-</section>
+  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-brand-primary/20 rounded-full blur-[120px] -z-10"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-brand-accent/10 rounded-full blur-[100px] -z-10"></div>
 
-<section id="services" class="py-20 bg-bg-dark">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-5xl font-bold text-center text-white mb-12">Our Services</h2>
-    <div class="grid gap-8 md:grid-cols-3 lg:grid-cols-4">
-      <div class="bg-white/10 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-shadow border border-white/20">
-        <div class="flex items-center justify-center mb-4"><svg class="w-12 h-12 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 0-9 9c0 5 4 9 9 9v2c-3.33 0-6-2.67-6-6 0-1.73.8-3.21 2-4.22v-2c3 0 6-3 6-6a9 9 0 0 0-9-9zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></div>
-        <h3 class="text-lg font-semibold text-white mb-2">Strategy</h3><p class="text-sm text-gray-300">Road‑maps that accelerate growth.</p>
+    <div class="container mx-auto px-6 text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full glass border border-brand-vibrant/30 mb-6 animate-fade-in-up">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        <span class="text-xs font-semibold text-brand-vibrant uppercase tracking-wider">Accepting New Partners</span>
       </div>
-      <div class="bg-white/10 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-shadow border border-white/20">
-        <div class="flex items-center justify-center mb-4"><svg class="w-12 h-12 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10c0 4.97 4.03 9 9 9v2c-2.5 0-4.76-1.55-5.66-3.57l.71.71C9.76 21 12.99 24 14 24h6c.44 0 .84-.13 1.21-.35l.71.71C21.76 24 24 21 24 14v-6c0-3.33-2.67-6-6-6V2a10 10 0 0 0-10-10z"/></svg></div>
-        <h3 class="text-lg font-semibold text-white mb-2">Technology</h3><p class="text-sm text-gray-300">Scalable platforms built for tomorrow.</p>
-      </div>
-      <div class="bg-white/10 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-shadow border border-white/20">
-        <div class="flex items-center justify-center mb-4"><svg class="w-12 h-12 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-0.55 0-1 0.45-1 1v14c0 0.55 0.45 1 1 1h16c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1zM4 7v10h16V7H4zm2 3 3-3 3 3v6h-2V10zm5 5h-2v6h2v-6H7v-2z"/></svg></div>
-        <h3 class="text-lg font-semibold text-white mb-2">Design</h3><p class="text-sm text-gray-300">Human‑centered experiences that convert.</p>
-      </div>
-      <div class="bg-white/10 rounded-xl p-6 shadow-lg hover:shadow-xl hover:scale-105 transition-shadow border border-white/20">
-        <div class="flex items-center justify-center mb-4"><svg class="w-12 h-12 text-gold-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2a8 8 0 0 0-8 8c0 4.42 3.58 8 8 8v2c-5.5 0-10-4.47-10-10 0-3.31 2.69-6 6-6h4zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg></div>
-        <h3 class="text-lg font-semibold text-white mb-2">Analytics</h3><p class="text-sm text-gray-300">Data‑driven insights for decisive action.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="portfolio" class="py-20 bg-white">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl md:text-5xl font-bold text-center text-dark mb-12">Selected Impact</h2>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Case study screenshot" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
-        <div class="p-4 bg-white/90">
-          <h3 class="text-lg font-semibold text-dark mb-1">Digital Revamp for a Fortune‑500 Bank</h3>
-          <p class="text-sm text-gray-700 mb-2">Cut processing time by 38 % and saved $2.3 M annually.</p>
-          <a href="#" class="inline-block text-gold-600 hover:underline mt-2">Read Case Study</a>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-        <img src="https://images.unsplash.com/photo-1522199670076-2852f80289e4?auto=format&fit=crop&w=600&q=80" alt="Case study screenshot" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
-        <div class="p-4 bg-white/90">
-          <h3 class="text-lg font-semibold text-dark mb-1">AI Forecasting for a Global Retailer</h3>
-          <p class="text-sm text-gray-700 mb-2">Improved demand accuracy from 68 % to 92 %.</p>
-          <a href="#" class="inline-block text-gold-600 hover:underline mt-2">Read Case Study</a>
-        </div>
-      </div>
-      <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-        <img src="https://images.unsplash.com/photo-1542291694-5a6958d72558?auto=format&fit=crop&w=600&q=80" alt="Case study screenshot" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
-        <div class="p-4 bg-white/90">
-          <h3 class="text-lg font-semibold text-dark mb-1">Customer‑Experience Redesign</h3>
-          <p class="text-sm text-gray-700 mb-2">NPS increased from 31 to 48 after the overhaul.</p>
-          <a href="#" class="inline-block text-gold-600 hover:underline mt-2">Read Case Study</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="about" class="py-20 bg-bg-dark">
-  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-    <div class="max-w-md text-center md:mr-8 mb-8 md:mb-0">
-      <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">About Us</h2>
-      <p class="text-gray-300 mb-6">We blend deep industry expertise with cutting‑edge analytics to solve our clients’ hardest problems.</p>
-      <ul class="list-disc list-inside space-y-2 text-sm text-gray-300">
-        <li><strong>Location:</strong> New York, USA</li>
-        <li><strong>Founded:</strong> 2021</li>
-        <li><strong>Team size:</strong> 12 consultants</li>
-        <li><strong>Tech stack:</strong> Python, React, Tableau</li>
-      </ul>
-      <a href="#contact" class="inline-block mt-6 bg-gold-600 hover:bg-gold-700 text-white rounded-lg px-5 py-2 transition-colors">Get in Touch</a>
-    </div>
-    <div class="flex-1 max-w-lg">
-      <img src="https://images.unsplash.com/photo-159506D369748-2s95bcdb112e?auto=format&fit=crop&w=300&q=80" alt="Team portrait" class="w-full h-96 rounded-xl shadow-lg">
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="py-20 bg-dark text-white">
-  <div class="container mx-auto px-4 max-w-xl mx-auto">
-    <h2 class="text-3xl md:text-5xl font-bold text-center mb-8">Let’s Build the Future Together</h2>
-    <form class="mx-auto w-full bg-white bg-opacity-90 rounded-xl p-8 shadow-lg">
-      <div class="mb-4 flex flex-col">
-        <label class="mb-1 text-sm font-medium text-white">Your Name</label>
-        <input type="text" name="name" required class="border border-white/30 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white"/>
-      </div>
-      <div class="mb-4 flex flex-col">
-        <label class="mb-1 text-sm font-medium text-white">Email</label>
-        <input type="email" name="email" required class="border border-white/30 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white"/>
-      </div>
-      <div class="mb-6 flex flex-col">
-        <label class="mb-1 text-sm font-medium text-white">Message</label>
-        <textarea rows="5" name="message" required class="border border-white/30 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-gold-500 bg-white resize-none"></textarea>
-      </div>
-      <button type="submit" class="w-full bg-gold-600 hover:bg-gold-700 text-white font-medium rounded-lg py-3 transition-colors">Send Message</button>
-    </form>
-  </div>
-</section>
-
-<footer class="bg-dark text-gray-300 py-12">
-  <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-    <div>
-      <p class="text-sm">© 2025 YourCo. All rights reserved.</p>
-      <p class="mt-2 text-xs">
-        Follow us on
-        <a href="#" class="text-gray-400 hover:text-gold-300 underline">Twitter</a>,
-        <a href="#" class="text-gray-400 hover:text-gold-300 underline">LinkedIn</a>.
+      
+      <h1 class="font-heading text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+        Scale Faster with <br>
+        <span class="text-transparent bg-clip-text bg-vibrant-gradient">Intelligent Outsourcing</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-light">
+        O.N.S. connects you with world-class talent and data-driven strategies. We handle the operations so you can focus on the innovation.
       </p>
-    </div>
-    <div class="text-center md:text-left">
-      <p class="text-sm font-medium">Quick Links</p>
-      <ul class="mt-1 space-y-1 text-sm">
-        <li><a href="#home"    class="text-gray-400 hover:text-gold-300">Home</a></li>
-        <li><a href="#services" class="text-gray-400 hover:text-gold-300">Services</a></li>
-        <li><a href="#portfolio" class="text-gray-400 hover:text-gold-300">Portfolio</a></li>
-        <li><a href="#about"   class="text-gray-400 hover:text-gold-300">About</a></li>
-        <li><a href="#contact" class="text-gray-400 hover:text-gold-300">Contact</a></li>
-      </ul>
-    </div>
-    <div class="text-center md:text-right">
-      <p class="text-sm">© 2025 <strong>YourCo</strong></p>
-    </div>
-  </div>
-</footer>
+      
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#services" class="px-8 py-4 rounded-full bg-vibrant-gradient text-white font-bold shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/50 hover:scale-105 transition-all">
+          Explore Solutions
+        </a>
+        <a href="#contact" class="px-8 py-4 rounded-full glass hover:bg-white/10 text-white font-medium border border-white/20 hover:border-white/40 transition-all">
+          Talk to an Expert
+        </a>
+      </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded",()=>{
-    const btn=document.querySelector("#top-nav button");
-    const menu=document.getElementById("mobile-menu");
-    if(btn && menu) btn.addEventListener("click",()=>menu.classList.toggle("hidden"));
-    const nav=document.getElementById("top-nav");
-    window.addEventListener("scroll",()=>{if(window.scrollY>50){nav.classList.add("bg-white/95");}else{nav.classList.remove("bg-white/95");}});
-  });
-</script>
+      <div class="mt-16 mx-auto max-w-5xl relative">
+        <div class="absolute inset-0 bg-brand-vibrant blur-[60px] opacity-20 -z-10"></div>
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" alt="Data Analytics Dashboard" class="rounded-xl border border-white/10 shadow-2xl w-full object-cover h-[400px] object-top opacity-90">
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 border-y border-white/5 bg-black/20">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/5">
+        <div>
+          <p class="text-4xl font-heading font-bold text-white mb-1">500+</p>
+          <p class="text-sm text-brand-vibrant uppercase tracking-wide">Projects Delivered</p>
+        </div>
+        <div>
+          <p class="text-4xl font-heading font-bold text-white mb-1">98%</p>
+          <p class="text-sm text-brand-vibrant uppercase tracking-wide">Client Retention</p>
+        </div>
+        <div>
+          <p class="text-4xl font-heading font-bold text-white mb-1">24/7</p>
+          <p class="text-sm text-brand-vibrant uppercase tracking-wide">Support Coverage</p>
+        </div>
+        <div>
+          <p class="text-4xl font-heading font-bold text-white mb-1">40%</p>
+          <p class="text-sm text-brand-vibrant uppercase tracking-wide">Avg Cost Reduction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-24 relative">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4">Our Expertise</h2>
+        <p class="text-slate-400 max-w-xl mx-auto">Comprehensive outsourcing solutions tailored to modern business needs.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass p-8 rounded-2xl hover-lift group">
+          <div class="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center mb-6 text-blue-400 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Customer Support (BPO)</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Omnichannel support (Voice, Chat, Email) provided by empathetic professionals to boost your NPS scores.
+          </p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl hover-lift group">
+          <div class="w-14 h-14 rounded-xl bg-purple-500/20 flex items-center justify-center mb-6 text-purple-400 group-hover:bg-purple-500 group-hover:text-white transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">IT & Tech Solutions</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            From helpdesk support to custom software development. We keep your infrastructure running 24/7.
+          </p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl hover-lift group">
+          <div class="w-14 h-14 rounded-xl bg-cyan-500/20 flex items-center justify-center mb-6 text-cyan-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Data Management</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Accurate data entry, mining, and processing services to turn raw information into actionable business assets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="impact" class="py-24 bg-slate-900">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div>
+          <h2 class="font-heading text-3xl md:text-5xl font-bold mb-2">Relevant Impact</h2>
+          <p class="text-slate-400">See how we transform operations.</p>
+        </div>
+        <a href="#" class="text-brand-vibrant hover:text-white font-semibold flex items-center mt-4 md:mt-0">
+          View all Case Studies <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="group relative overflow-hidden rounded-2xl h-80">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80" alt="Team Analysis" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent p-8 flex flex-col justify-end">
+            <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <span class="text-xs font-bold text-brand-vibrant uppercase mb-2 block">FinTech Sector</span>
+              <h3 class="text-2xl font-bold text-white mb-2">Fraud Detection Scaling</h3>
+              <p class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Processed 1M+ transactions daily with 99.9% accuracy, reducing risk overhead by 35%.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-2xl h-80">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Support Team" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/60 to-transparent p-8 flex flex-col justify-end">
+            <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <span class="text-xs font-bold text-brand-vibrant uppercase mb-2 block">E-Commerce</span>
+              <h3 class="text-2xl font-bold text-white mb-2">24/7 Global Support Hub</h3>
+              <p class="text-slate-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Launched a multilingual support center in 30 days, improving response time from 4 hours to 5 minutes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-24 relative overflow-hidden">
+    <div class="absolute -right-20 top-40 w-96 h-96 bg-brand-primary/10 rounded-full blur-3xl"></div>
+
+    <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2 relative">
+        <div class="absolute -inset-4 bg-vibrant-gradient rounded-2xl blur-lg opacity-40"></div>
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="O.N.S. Team" class="relative rounded-2xl shadow-2xl border border-white/10 z-10">
+      </div>
+      
+      <div class="w-full md:w-1/2">
+        <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6">About O.N.S.</h2>
+        <h3 class="text-xl text-white font-medium mb-4">"We are the engine behind your growth."</h3>
+        <p class="text-slate-400 mb-6 leading-relaxed">
+          O.N.S. Outsourcing Solutions was founded on a simple premise: Efficiency shouldn't compromise quality. By leveraging global talent pools and cutting-edge technology, we provide seamless extensions to your in-house teams.
+        </p>
+        
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-center text-slate-300">
+            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Data Security Guaranteed (ISO 27001)
+          </li>
+          <li class="flex items-center text-slate-300">
+            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Scalable Teams on Demand
+          </li>
+          <li class="flex items-center text-slate-300">
+            <svg class="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            Transparent Reporting
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-1 p-1 shadow-2xl overflow-hidden border border-white/10">
+        <div class="bg-brand-dark rounded-[22px] p-8 md:p-12 relative overflow-hidden">
+          
+          <div class="text-center mb-10 relative z-10">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Ready to Optimize?</h2>
+            <p class="text-slate-400">Tell us about your needs. We'll build a custom plan within 24 hours.</p>
+          </div>
+
+          <form class="space-y-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-slate-300 ml-1">Full Name</label>
+                <input type="text" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all placeholder-slate-600" placeholder="John Doe">
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-semibold text-slate-300 ml-1">Work Email</label>
+                <input type="email" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all placeholder-slate-600" placeholder="john@company.com">
+              </div>
+            </div>
+            
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-slate-300 ml-1">Service Interest</label>
+              <select class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all appearance-none">
+                <option>Customer Support (BPO)</option>
+                <option>IT Solutions</option>
+                <option>Data Management</option>
+                <option>Other / Consultation</option>
+              </select>
+            </div>
+
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-slate-300 ml-1">Message</label>
+              <textarea rows="4" class="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary transition-all placeholder-slate-600" placeholder="Briefly describe your project..."></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-4 rounded-xl bg-vibrant-gradient text-white font-bold text-lg hover:shadow-lg hover:shadow-cyan-500/40 transform active:scale-95 transition-all">
+              Send Request
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black py-12 border-t border-white/10 text-sm">
+    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-4 md:mb-0">
+        <span class="font-heading font-bold text-xl text-white">O.N.S.</span>
+        <p class="text-slate-500 mt-1">Outsourcing Solutions © 2025</p>
+      </div>
+      
+      <div class="flex space-x-6">
+        <a href="#" class="text-slate-400 hover:text-brand-vibrant transition-colors">LinkedIn</a>
+        <a href="#" class="text-slate-400 hover:text-brand-vibrant transition-colors">Twitter</a>
+        <a href="#" class="text-slate-400 hover:text-brand-vibrant transition-colors">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Logic for Mobile Menu & Navbar Frosted Effect
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const nav = document.getElementById("navbar");
+
+      // Toggle Mobile Menu
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // Navbar Scroll Effect
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+          nav.classList.add("glass-light", "bg-brand-dark/90", "shadow-lg");
+          nav.classList.remove("py-4");
+          nav.classList.add("py-2");
+        } else {
+          nav.classList.remove("glass-light", "bg-brand-dark/90", "shadow-lg", "py-2");
+          nav.classList.add("py-4");
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-```
