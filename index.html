@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O.N.S.O.S. | Outsourcing Solutions</title>
-  <meta name="description" content="O.N.S. Outsourcing Solutions – Premium BPO, IT, and administrative services.">
+  <title>O.N.S. OUTSOURCING SOLUTIONS | In Excellence We Trust</title>
+  <meta name="description" content="O.N.S. Outsourcing Solutions – Premier Accounting, HR, and Business Support Services.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -21,26 +21,15 @@
           },
           colors: {
             brand: {
-              dark: '#0B1120',    // Deepest Royal Blue
-              slate: '#1e293b',   // Lighter slate for cards
-              gold: '#D4AF37',    // Classic Metallic Gold
-              amber: '#F59E0B',   // Bright Gold
-              light: '#FDE68A',   // Highlight
+              navy: '#0B1120',    // Deep Royal Blue (Background)
+              blue: '#1e3a8a',    // Accent Blue
+              gold: '#FFD700',    // Bright Gold
+              darkGold: '#B8860B', // Dark Gold
             }
           },
           backgroundImage: {
-            'gold-gradient': 'linear-gradient(135deg, #C59D5F 0%, #F59E0B 50%, #D4AF37 100%)',
-            'gold-text': 'linear-gradient(to right, #FDE68A, #D4AF37, #F59E0B)',
-            'dark-gradient': 'radial-gradient(circle at center, #1e293b 0%, #0B1120 100%)',
-          },
-          animation: {
-            'float': 'float 6s ease-in-out infinite',
-          },
-          keyframes: {
-            float: {
-              '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-10px)' },
-            }
+            'gold-gradient': 'linear-gradient(135deg, #FDE68A 0%, #D4AF37 50%, #B8860B 100%)',
+            'blue-gradient': 'linear-gradient(to bottom right, #0B1120, #172554)',
           }
         }
       }
@@ -52,233 +41,259 @@
     ::-webkit-scrollbar-track { background: #0B1120; }
     ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
     
-    /* Glassmorphism with Gold Border */
+    /* Glassmorphism */
     .glass {
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(212, 175, 55, 0.15);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.2);
     }
     
-    /* Text Gradient Utility */
+    /* Gold Text Effect */
     .text-gold-gradient {
       background: linear-gradient(to right, #FDE68A, #D4AF37, #F59E0B);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    
+    /* Ensure logo stands out */
+    .logo-filter {
+      filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+    }
   </style>
 </head>
-<body class="bg-brand-dark text-slate-200 antialiased selection:bg-brand-gold selection:text-white">
+<body class="bg-brand-navy text-slate-200 antialiased selection:bg-brand-gold selection:text-black">
 
-  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-3 bg-brand-navy/95 backdrop-blur-md border-b border-brand-gold/20 shadow-lg">
     <div class="container mx-auto px-6 flex justify-between items-center">
       
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="bg-white rounded-xl p-1 shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-transform duration-300 group-hover:scale-105">
-           <img src="WhatsApp Image 2026-01-26 at 10.03.32.jpeg" alt="O.N.S.O.S Logo" class="h-12 w-auto object-contain rounded-lg">
-        </div>
-        <div class="hidden sm:block leading-tight">
-          <span class="block font-heading font-bold text-lg text-white tracking-wide">O.N.S.O.S.</span>
-          <span class="block text-[10px] text-brand-gold uppercase tracking-widest">Global Solutions</span>
+      <a href="#" class="flex items-center gap-4 group">
+        <img src="nobg logo.png" alt="O.N.S. Logo" class="h-16 w-auto object-contain logo-filter transition-transform group-hover:scale-105">
+        
+        <div class="hidden sm:block">
+          <span class="font-heading font-black text-2xl lg:text-3xl text-white uppercase tracking-wider leading-none drop-shadow-lg">
+              O.N.S. <span class="text-gold-gradient">Outsourcing Solutions</span>
+          </span>
         </div>
       </a>
       
-      <div class="hidden md:flex items-center space-x-8">
-        <a href="#services" class="text-sm font-medium hover:text-brand-gold transition-colors">Services</a>
-        <a href="#impact" class="text-sm font-medium hover:text-brand-gold transition-colors">Data & Impact</a>
-        <a href="#about" class="text-sm font-medium hover:text-brand-gold transition-colors">About</a>
-        <a href="#contact" class="px-6 py-2.5 rounded-full bg-gold-gradient text-white font-bold text-sm shadow-lg shadow-brand-gold/20 hover:shadow-brand-gold/40 hover:scale-105 transition-all">
+      <div class="hidden lg:flex items-center space-x-8">
+        <a href="#about" class="text-base font-bold text-white hover:text-brand-gold transition-colors tracking-wide">ABOUT US</a>
+        <a href="#services" class="text-base font-bold text-white hover:text-brand-gold transition-colors tracking-wide">SERVICES</a>
+        <a href="#contact" class="px-7 py-3 rounded-full bg-gold-gradient text-brand-navy font-extrabold text-sm shadow-lg shadow-brand-gold/20 hover:scale-105 transition-all uppercase tracking-wide">
           Get a Quote
         </a>
       </div>
 
-      <button id="menu-btn" class="md:hidden text-brand-gold focus:outline-none">
+      <button id="menu-btn" class="lg:hidden text-brand-gold focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
     </div>
 
-    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-dark/95 border-b border-brand-gold/20 p-4 flex flex-col space-y-4 md:hidden shadow-2xl backdrop-blur-xl">
-      <a href="#services" class="block text-center py-3 rounded-lg text-white hover:bg-white/5">Services</a>
-      <a href="#impact" class="block text-center py-3 rounded-lg text-white hover:bg-white/5">Impact</a>
-      <a href="#about" class="block text-center py-3 rounded-lg text-white hover:bg-white/5">About</a>
-      <a href="#contact" class="block text-center py-3 bg-gold-gradient text-white font-bold rounded-lg shadow-lg">Get a Quote</a>
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-navy border-b border-brand-gold/20 p-4 flex flex-col space-y-4 lg:hidden shadow-2xl">
+      <a href="#about" class="block text-center py-3 rounded-lg text-white font-bold hover:bg-white/5">ABOUT US</a>
+      <a href="#services" class="block text-center py-3 rounded-lg text-white font-bold hover:bg-white/5">SERVICES</a>
+      <a href="#contact" class="block text-center py-3 bg-gold-gradient text-brand-navy font-bold rounded-lg shadow-lg uppercase">Get a Quote</a>
     </div>
   </nav>
 
-  <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+  <section class="relative pt-36 pb-20 lg:pt-52 lg:pb-32 overflow-hidden">
     <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-[120px] -z-10"></div>
-    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/20 rounded-full blur-[100px] -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/30 rounded-full blur-[100px] -z-10"></div>
 
     <div class="container mx-auto px-6 text-center z-10">
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-8 animate-fade-in">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-6">
         <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
-        <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">Premium Outsourcing Partner</span>
+        <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">In Excellence We Trust</span>
       </div>
       
       <h1 class="font-heading text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-        Golden Standard in <br>
-        <span class="text-gold-gradient">Global Efficiency</span>
+        Your One-Stop Partner for <br>
+        <span class="text-gold-gradient">Business Growth</span>
       </h1>
       
-      <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
-        O.N.S.O.S. empowers your business with elite BPO, IT, and Data strategies. We handle the complexity so you can focus on the growth.
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+        From complete accounting solutions to manpower supply. We manage the critical non-core functions so you can focus on scaling your enterprise.
       </p>
       
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#contact" class="px-8 py-4 rounded-full bg-gold-gradient text-white font-bold shadow-xl shadow-brand-gold/20 hover:scale-105 transition-all">
-          Start Your Project
-        </a>
-        <a href="#services" class="px-8 py-4 rounded-full glass hover:bg-white/5 text-white font-medium transition-all">
-          View Services
+        <a href="#contact" class="px-10 py-4 rounded-full bg-gold-gradient text-brand-navy font-bold shadow-xl shadow-brand-gold/20 hover:scale-105 transition-all">
+          Partner With Us
         </a>
       </div>
 
-      <div class="mt-16 mx-auto max-w-5xl relative animate-float">
+      <div class="mt-16 mx-auto max-w-5xl relative">
         <div class="absolute inset-0 bg-brand-gold blur-[80px] opacity-10 -z-10"></div>
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80" alt="Data Analytics Dashboard" class="rounded-xl border border-brand-gold/20 shadow-2xl w-full object-cover h-[400px] object-top opacity-90">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80" alt="Corporate Office" class="rounded-xl border border-brand-gold/30 shadow-2xl w-full object-cover h-[450px] opacity-90">
       </div>
     </div>
   </section>
 
-  <section class="py-10 border-y border-white/5 bg-black/20">
+  <section id="about" class="py-20 bg-black/20 relative border-y border-white/5">
     <div class="container mx-auto px-6">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-        <div class="border-r border-white/5 last:border-0">
-          <p class="text-4xl font-heading font-bold text-white mb-1">99%</p>
-          <p class="text-xs text-brand-gold uppercase tracking-widest">Accuracy Rate</p>
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-brand-gold/20 blur-xl rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Meeting" class="relative rounded-2xl shadow-2xl border border-white/10">
+            </div>
         </div>
-        <div class="border-r border-white/5 last:border-0">
-          <p class="text-4xl font-heading font-bold text-white mb-1">24/7</p>
-          <p class="text-xs text-brand-gold uppercase tracking-widest">Support Ops</p>
-        </div>
-        <div class="border-r border-white/5 last:border-0">
-          <p class="text-4xl font-heading font-bold text-white mb-1">45%</p>
-          <p class="text-xs text-brand-gold uppercase tracking-widest">Cost Savings</p>
-        </div>
-        <div>
-          <p class="text-4xl font-heading font-bold text-white mb-1">Global</p>
-          <p class="text-xs text-brand-gold uppercase tracking-widest">Client Base</p>
+        <div class="lg:w-1/2">
+          <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6 text-white">Our Legacy</h2>
+          <div class="space-y-4 text-slate-300 leading-relaxed">
+            <p>
+              <strong>O.N.S. OUTSOURCING SOLUTIONS</strong> was established in <strong>2008</strong> by Mr. Girijashanker Mishra and Mrs. Kavita Mishra with a singular vision: to address the growing demand for reliable outsourcing in domestic and international markets.
+            </p>
+            <p>
+              For nearly two decades, we have stood by our motto, <em>"In Excellence We Trust."</em> Today, led by <strong>Aditya Mishra</strong>, we continue to expand our legacy, incorporating modern innovations while maintaining the values of integrity and professionalism.
+            </p>
+            <p>
+              We position ourselves as a one-stop business partner for SMEs, startups, and large enterprises. We understand that a one-person army cannot handle every business process. We take that burden off your shoulders.
+            </p>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
+            <div>
+              <span class="block text-3xl font-bold text-brand-gold">2008</span>
+              <span class="text-xs text-slate-400 uppercase">Established</span>
+            </div>
+            <div>
+              <span class="block text-3xl font-bold text-brand-gold">15+</span>
+              <span class="text-xs text-slate-400 uppercase">Years Experience</span>
+            </div>
+            <div>
+              <span class="block text-3xl font-bold text-brand-gold">360°</span>
+              <span class="text-xs text-slate-400 uppercase">Business Support</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="py-24 relative">
+  <section id="services" class="py-24">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
-        <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 text-white">Our Expertise</h2>
-        <div class="w-20 h-1 bg-brand-gold mx-auto rounded-full mb-4"></div>
-        <p class="text-slate-400 max-w-xl mx-auto">Scalable solutions tailored to your operational needs.</p>
+        <h2 class="font-heading text-3xl md:text-5xl font-bold mb-4 text-white">Services We Offer</h2>
+        <div class="w-24 h-1 bg-brand-gold mx-auto rounded-full mb-6"></div>
+        <p class="text-slate-400 max-w-xl mx-auto">Comprehensive outsourcing solutions tailored to your specific needs.</p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-br from-brand-gold to-yellow-600 flex items-center justify-center mb-6 shadow-lg shadow-brand-gold/20 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">BPO & Support</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Enhance customer satisfaction with our trained, multilingual support teams available around the clock.
-          </p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group border-l-4 border-l-transparent hover:border-l-brand-gold">
+          <div class="text-brand-gold mb-4"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg></div>
+          <h3 class="text-xl font-bold text-white mb-2">Complete Accounting Solutions</h3>
+          <p class="text-slate-400 text-sm">Full-service bookkeeping, financial analysis, and reporting.</p>
         </div>
 
-        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-br from-brand-gold to-yellow-600 flex items-center justify-center mb-6 shadow-lg shadow-brand-gold/20 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">IT Solutions</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            From server management to custom development, we ensure your tech infrastructure is robust and secure.
-          </p>
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group border-l-4 border-l-transparent hover:border-l-brand-gold">
+          <div class="text-brand-gold mb-4"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>
+          <h3 class="text-xl font-bold text-white mb-2">Document Drafting</h3>
+          <p class="text-slate-400 text-sm">Professional creation of contracts, MOUs, and business agreements.</p>
         </div>
 
-        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
-          <div class="w-14 h-14 rounded-full bg-gradient-to-br from-brand-gold to-yellow-600 flex items-center justify-center mb-6 shadow-lg shadow-brand-gold/20 group-hover:scale-110 transition-transform">
-            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Data Management</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Turn chaos into clarity. We handle data entry, mining, and processing with military-grade precision.
-          </p>
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group border-l-4 border-l-transparent hover:border-l-brand-gold">
+          <div class="text-brand-gold mb-4"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></div>
+          <h3 class="text-xl font-bold text-white mb-2">Manpower Supply</h3>
+          <p class="text-slate-400 text-sm">Providing skilled and semi-skilled workforce for your operations.</p>
         </div>
+
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group border-l-4 border-l-transparent hover:border-l-brand-gold">
+          <div class="text-brand-gold mb-4"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
+          <h3 class="text-xl font-bold text-white mb-2">Hiring & Recruitment</h3>
+          <p class="text-slate-400 text-sm">Strategic talent acquisition to find the right fit for your company culture.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group border-l-4 border-l-transparent hover:border-l-brand-gold">
+          <div class="text-brand-gold mb-4"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+          <h3 class="text-xl font-bold text-white mb-2">Banking & Investment</h3>
+          <p class="text-slate-400 text-sm">Expert guidance on corporate banking, loans, and investment planning.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group border-l-4 border-l-transparent hover:border-l-brand-gold">
+          <div class="text-brand-gold mb-4"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg></div>
+          <h3 class="text-xl font-bold text-white mb-2">Compliances & Duties Filing</h3>
+          <p class="text-slate-400 text-sm">Timely filing of GST, TDS, and other statutory duties to ensure compliance.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group border-l-4 border-l-transparent hover:border-l-brand-gold">
+          <div class="text-brand-gold mb-4"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg></div>
+          <h3 class="text-xl font-bold text-white mb-2">Logo & Ad Creation</h3>
+          <p class="text-slate-400 text-sm">Creative design services for logos, banners, and digital advertisements.</p>
+        </div>
+
+        <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group border-l-4 border-l-transparent hover:border-l-brand-gold">
+          <div class="text-brand-gold mb-4"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg></div>
+          <h3 class="text-xl font-bold text-white mb-2">Licensing & Registration</h3>
+          <p class="text-slate-400 text-sm">Assistance with business registration, shop act, and other necessary licenses.</p>
+        </div>
+        
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-24 bg-gradient-to-b from-brand-dark to-black">
+  <section id="contact" class="py-24 bg-gradient-to-t from-black to-brand-navy">
     <div class="container mx-auto px-6 max-w-4xl">
       
-      <div class="relative rounded-3xl p-[1px] bg-gradient-to-b from-brand-gold to-transparent shadow-2xl">
-        <div class="bg-brand-slate rounded-[23px] p-8 md:p-12 relative overflow-hidden">
+      <div class="bg-brand-navy border border-brand-gold/20 rounded-3xl p-8 md:p-12 relative overflow-hidden shadow-2xl">
           
-          <div class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/10 blur-[80px] rounded-full pointer-events-none"></div>
+        <div class="absolute -top-20 -right-20 w-80 h-80 bg-brand-gold/10 blur-[80px] rounded-full"></div>
 
-          <div class="text-center mb-10 relative z-10">
-            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Get Your Custom Quote</h2>
-            <p class="text-slate-400">Fill in the details below. Our team will review your requirements and email you a proposal.</p>
+        <div class="text-center mb-10 relative z-10">
+          <h2 class="font-heading text-3xl md:text-4xl font-bold mb-4 text-white">Get Your Custom Quote</h2>
+          <p class="text-slate-400">Tell us what you need. We'll handle the rest.</p>
+        </div>
+
+        <form action="https://formsubmit.co/onsoutosurcingsolutions@gmail.com" method="POST" class="space-y-6 relative z-10">
+          
+          <input type="hidden" name="_subject" value="New Quote Request - O.N.S. Website">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-brand-gold ml-1">Full Name</label>
+              <input type="text" name="name" required class="w-full bg-black/40 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all" placeholder="John Doe">
+            </div>
+            <div class="space-y-2">
+              <label class="text-sm font-semibold text-brand-gold ml-1">Email Address</label>
+              <input type="email" name="email" required class="w-full bg-black/40 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all" placeholder="john@company.com">
+            </div>
+          </div>
+          
+          <div class="space-y-2">
+            <label class="text-sm font-semibold text-brand-gold ml-1">Service Required</label>
+            <select name="service" class="w-full bg-black/40 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition-all">
+              <option value="Accounting">Complete Accounting Solutions</option>
+              <option value="Manpower">Manpower Supply</option>
+              <option value="Recruitment">Hiring & Recruitment</option>
+              <option value="Compliance">Compliances & Duties Filing</option>
+              <option value="Marketing">Logo/Advertisement Creation</option>
+              <option value="Drafting">Document Drafting</option>
+              <option value="Banking">Banking & Investment</option>
+              <option value="Licensing">Licensing & Registration</option>
+              <option value="Other">Other</option>
+            </select>
           </div>
 
-          <form action="https://formsubmit.co/onsoutosurcingsolutions@gmail.com" method="POST" class="space-y-6 relative z-10">
-            
-            <input type="hidden" name="_subject" value="New Quote Request - O.N.S.O.S. Website">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_captcha" value="false">
+          <div class="space-y-2">
+            <label class="text-sm font-semibold text-brand-gold ml-1">Message</label>
+            <textarea name="message" rows="4" required class="w-full bg-black/40 border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition-all" placeholder="Describe your requirements..."></textarea>
+          </div>
 
-            <div class="grid md:grid-cols-2 gap-6">
-              <div class="space-y-2">
-                <label class="text-sm font-semibold text-brand-gold ml-1">Full Name</label>
-                <input type="text" name="name" required class="w-full bg-brand-dark border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all" placeholder="John Doe">
-              </div>
-              <div class="space-y-2">
-                <label class="text-sm font-semibold text-brand-gold ml-1">Email Address</label>
-                <input type="email" name="email" required class="w-full bg-brand-dark border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all" placeholder="john@company.com">
-              </div>
-            </div>
-            
-            <div class="space-y-2">
-              <label class="text-sm font-semibold text-brand-gold ml-1">Service Needed</label>
-              <select name="service" class="w-full bg-brand-dark border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition-all">
-                <option value="BPO Support">Customer Support (BPO)</option>
-                <option value="IT Services">IT & Technical Solutions</option>
-                <option value="Data Entry">Data Entry & Management</option>
-                <option value="Consulting">General Consultation</option>
-              </select>
-            </div>
+          <button type="submit" class="w-full py-4 rounded-xl bg-gold-gradient text-brand-navy font-bold text-lg hover:shadow-lg hover:shadow-brand-gold/30 transform active:scale-95 transition-all">
+            Send Request
+          </button>
+        </form>
 
-            <div class="space-y-2">
-              <label class="text-sm font-semibold text-brand-gold ml-1">Project Details</label>
-              <textarea name="message" rows="4" required class="w-full bg-brand-dark border border-slate-700 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-gold transition-all" placeholder="Tell us about your volume, timeline, and goals..."></textarea>
-            </div>
-
-            <button type="submit" class="w-full py-4 rounded-xl bg-gold-gradient text-white font-bold text-lg hover:shadow-lg hover:shadow-brand-gold/30 transform active:scale-95 transition-all">
-              Send Request
-            </button>
-            <p class="text-center text-xs text-slate-500 mt-4">We respect your privacy. No spam.</p>
-          </form>
-
-        </div>
       </div>
     </div>
   </section>
 
-  <footer class="bg-black py-12 border-t border-white/10 text-sm">
-    <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div class="flex items-center gap-2">
-        <div class="bg-white rounded-full p-0.5 h-8 w-8 flex items-center justify-center">
-            <img src="WhatsApp Image 2026-01-26 at 10.03.32.jpeg" class="h-6 w-6 object-contain">
-        </div>
-        <span class="font-heading font-bold text-lg text-white">O.N.S.O.S.</span>
-      </div>
-      
-      <p class="text-slate-500">© 2025 O.N.S. Outsourcing Solutions. All rights reserved.</p>
-      
-      <div class="flex space-x-6">
-        <a href="#" class="text-slate-400 hover:text-brand-gold transition-colors">LinkedIn</a>
-        <a href="#" class="text-slate-400 hover:text-brand-gold transition-colors">Privacy</a>
-        <a href="mailto:onsoutosurcingsolutions@gmail.com" class="text-slate-400 hover:text-brand-gold transition-colors">Support</a>
-      </div>
+  <footer class="bg-black py-8 border-t border-white/10 text-sm">
+    <div class="container mx-auto px-6 text-center">
+      <p class="text-slate-500">© 2026 O.N.S. OUTSOURCING SOLUTIONS. All rights reserved.</p>
     </div>
   </footer>
 
