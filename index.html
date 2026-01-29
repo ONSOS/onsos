@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -5,18 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>O.N.S. OUTSOURCING SOLUTIONS | In Excellence We Trust</title>
   <meta name="description" content="O.N.S. Outsourcing Solutions – Premier Accounting, HR, and Business Support Services.">
+  
   <link rel="icon" href="logo.png" type="image/png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com" rel="stylesheet">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'], heading: ['"Outfit"', 'sans-serif'] },
-          colors: { brand: { navy: '#0B1120', blue: '#1e3a8a', gold: '#FFD700', darkGold: '#B8860B' } },
-          backgroundImage: { 'gold-gradient': 'linear-gradient(135deg, #FDE68A 0%, #D4AF37 50%, #B8860B 100%)', 'blue-gradient': 'linear-gradient(to bottom right, #0B1120, #172554)' }
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['"Outfit"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              navy: '#0B1120',    // Deep Royal Blue
+              blue: '#1e3a8a',    // Accent Blue
+              gold: '#FFD700',    // Bright Gold
+              darkGold: '#B8860B', // Dark Gold
+            }
+          },
+          backgroundImage: {
+            'gold-gradient': 'linear-gradient(135deg, #FDE68A 0%, #D4AF37 50%, #B8860B 100%)',
+            'blue-gradient': 'linear-gradient(to bottom right, #0B1120, #172554)',
+          }
         }
       }
     }
@@ -25,32 +42,55 @@
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #0B1120; }
     ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 4px; }
-    .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(16px); border: 1px solid rgba(212, 175, 55, 0.2); }
-    .text-gold-gradient { background: linear-gradient(to right, #FDE68A, #D4AF37, #F59E0B); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .logo-filter { filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3)); }
+    
+    .glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    
+    .text-gold-gradient {
+      background: linear-gradient(to right, #FDE68A, #D4AF37, #F59E0B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .logo-filter {
+      filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.3));
+    }
   </style>
 </head>
 <body class="bg-brand-navy text-slate-200 antialiased selection:bg-brand-gold selection:text-black">
 
   <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-3 bg-brand-navy/95 backdrop-blur-md border-b border-brand-gold/20 shadow-lg">
     <div class="container mx-auto px-6 flex justify-between items-center">
-      <a href="#" class="flex items-center gap-3 group">
+      
+      <a href="#" class="flex items-center gap-3 md:gap-4 group">
         <img src="logo.png" alt="O.N.S. Logo" class="h-12 md:h-16 w-auto object-contain logo-filter transition-transform group-hover:scale-105">
+        
+        <!-- FIXED: Removed 'hidden sm:block' so it shows on mobile, adjusted font sizes -->
         <div class="block">
-          <span class="font-heading font-black text-sm xs:text-base sm:text-2xl text-white uppercase tracking-wider leading-none drop-shadow-lg block">
+          <span class="font-heading font-black text-sm xs:text-base sm:text-2xl lg:text-3xl text-white uppercase tracking-wider leading-none drop-shadow-lg block">
               O.N.S. <span class="text-gold-gradient">Outsourcing Solutions</span>
           </span>
         </div>
       </a>
+      
       <div class="hidden lg:flex items-center space-x-8">
         <a href="#about" class="text-base font-bold text-white hover:text-brand-gold transition-colors tracking-wide">ABOUT US</a>
         <a href="#services" class="text-base font-bold text-white hover:text-brand-gold transition-colors tracking-wide">SERVICES</a>
-        <a href="#contact" class="px-7 py-3 rounded-full bg-gold-gradient text-brand-navy font-extrabold text-sm shadow-lg shadow-brand-gold/20 hover:scale-105 transition-all uppercase tracking-wide">Get a Quote</a>
+        <a href="#contact" class="px-7 py-3 rounded-full bg-gold-gradient text-brand-navy font-extrabold text-sm shadow-lg shadow-brand-gold/20 hover:scale-105 transition-all uppercase tracking-wide">
+          Get a Quote
+        </a>
       </div>
+
       <button id="menu-btn" class="lg:hidden text-brand-gold focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
       </button>
     </div>
+
     <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-navy border-b border-brand-gold/20 p-4 flex flex-col space-y-4 lg:hidden shadow-2xl">
       <a href="#about" class="block text-center py-3 rounded-lg text-white font-bold hover:bg-white/5">ABOUT US</a>
       <a href="#services" class="block text-center py-3 rounded-lg text-white font-bold hover:bg-white/5">SERVICES</a>
@@ -59,69 +99,77 @@
   </nav>
 
   <section class="relative pt-36 pb-20 lg:pt-52 lg:pb-32 overflow-hidden">
-    <div class="absolute top-0 right-0 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-brand-gold/10 rounded-full blur-[80px] md:blur-[120px] -z-10"></div>
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-gold/10 rounded-full blur-[120px] -z-10"></div>
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-900/30 rounded-full blur-[100px] -z-10"></div>
+
     <div class="container mx-auto px-6 text-center z-10">
       <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass mb-6">
         <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse"></span>
         <span class="text-xs font-bold text-brand-gold uppercase tracking-wider">In Excellence We Trust</span>
       </div>
+      
       <h1 class="font-heading text-4xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-        Your One-Stop Partner for <br><span class="text-gold-gradient">Business Growth</span>
+        Your One-Stop Partner for <br>
+        <span class="text-gold-gradient">Business Growth</span>
       </h1>
-      <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">From complete accounting solutions to manpower supply. We manage the non-core functions so you can focus on scaling.</p>
+      
+      <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+        From complete accounting solutions to manpower supply. We manage the critical non-core functions so you can focus on scaling your enterprise.
+      </p>
+      
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <a href="#contact" class="px-10 py-4 rounded-full bg-gold-gradient text-brand-navy font-bold shadow-xl shadow-brand-gold/20 hover:scale-105 transition-all">Partner With Us</a>
+        <a href="#contact" class="px-10 py-4 rounded-full bg-gold-gradient text-brand-navy font-bold shadow-xl shadow-brand-gold/20 hover:scale-105 transition-all">
+          Partner With Us
+        </a>
       </div>
+
       <div class="mt-16 mx-auto max-w-5xl relative">
         <div class="absolute inset-0 bg-brand-gold blur-[80px] opacity-10 -z-10"></div>
-        <img src="https://images.unsplash.com" alt="Corporate Office" class="rounded-xl border border-brand-gold/30 shadow-2xl w-full object-cover h-[250px] md:h-[450px] opacity-90">
+        <img src="https://images.unsplash.com" alt="Corporate Office" class="rounded-xl border border-brand-gold/30 shadow-2xl w-full object-cover h-[300px] md:h-[450px] opacity-90">
       </div>
     </div>
   </section>
 
   <section id="about" class="py-20 bg-black/20 relative border-y border-white/5">
-    <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
-      <div class="lg:w-1/2 relative">
-        <div class="absolute -inset-4 bg-brand-gold/20 blur-xl rounded-full"></div>
-        <img src="https://images.unsplash.com" alt="Meeting" class="relative rounded-2xl shadow-2xl border border-white/10">
-      </div>
-      <div class="lg:w-1/2">
-        <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6 text-white">Our Legacy</h2>
-        <div class="space-y-4 text-slate-300 leading-relaxed">
-          <p><strong>O.N.S. OUTSOURCING SOLUTIONS</strong> was established in 2008 by Mr. Girijashanker Mishra and Mrs. Kavita Mishra with a singular vision for reliable outsourcing.</p>
-          <p>Led by <strong>Aditya Mishra</strong>, we continue to expand our legacy, incorporating modern innovations while maintaining values of integrity.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="py-20">
     <div class="container mx-auto px-6">
-      <h2 class="font-heading text-3xl md:text-5xl font-bold mb-12 text-center text-white">Our <span class="text-gold-gradient">Services</span></h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="glass p-8 rounded-2xl hover:border-brand-gold transition-colors group">
-          <h3 class="text-xl font-bold text-brand-gold mb-4 uppercase">Accounting</h3>
-          <p class="text-slate-400">Complete financial management including bookkeeping, tax compliance, and auditing.</p>
+      <div class="flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2">
+            <div class="relative">
+                <div class="absolute -inset-4 bg-brand-gold/20 blur-xl rounded-full"></div>
+                <img src="https://images.unsplash.com" alt="Meeting" class="relative rounded-2xl shadow-2xl border border-white/10">
+            </div>
         </div>
-        <div class="glass p-8 rounded-2xl hover:border-brand-gold transition-colors group">
-          <h3 class="text-xl font-bold text-brand-gold mb-4 uppercase">HR & Manpower</h3>
-          <p class="text-slate-400">Strategic recruitment and supply of skilled manpower to power your operations.</p>
-        </div>
-        <div class="glass p-8 rounded-2xl hover:border-brand-gold transition-colors group">
-          <h3 class="text-xl font-bold text-brand-gold mb-4 uppercase">Business Support</h3>
-          <p class="text-slate-400">End-to-end operational support to help startups and large enterprises scale efficiently.</p>
+        <div class="lg:w-1/2">
+          <h2 class="font-heading text-3xl md:text-5xl font-bold mb-6 text-white">Our Legacy</h2>
+          <div class="space-y-4 text-slate-300 leading-relaxed">
+            <p>
+              <strong>O.N.S. OUTSOURCING SOLUTIONS</strong> was established in 2008 by Mr. Girijashanker Mishra and Mrs. Kavita Mishra.
+            </p>
+            <p>
+              For nearly two decades, we have stood by our motto, <em>"In Excellence We Trust."</em> Today, led by <strong>Aditya Mishra</strong>, we continue to expand our legacy.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- MOBILE MENU SCRIPT -->
   <script>
     const btn = document.getElementById('menu-btn');
     const menu = document.getElementById('mobile-menu');
-    btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking a link
     document.querySelectorAll('#mobile-menu a').forEach(link => {
-      link.addEventListener('click', () => { menu.classList.add('hidden'); });
+      link.addEventListener('click', () => {
+        menu.classList.add('hidden');
+      });
     });
   </script>
+
 </body>
 </html>
