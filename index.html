@@ -71,11 +71,9 @@
     <div class="container mx-auto px-6 flex justify-between items-center">
       
       <a href="#" class="flex items-center gap-4 group">
-        <!-- CHANGE 1: Increased logo height from h-16 to h-20 -->
         <img src="logo.png" alt="O.N.S. Logo" class="h-20 w-auto object-contain logo-filter transition-transform group-hover:scale-105">
         
         <div class="hidden sm:block">
-          <!-- CHANGE 2 & 3: Increased text size and applied gold gradient to the whole span -->
           <span class="font-heading font-black text-3xl lg:text-4xl text-gold-gradient uppercase tracking-wider leading-none drop-shadow-lg">
               O.N.S. <span>Outsourcing Solutions</span>
           </span>
@@ -84,6 +82,7 @@
       
       <div class="hidden lg:flex items-center space-x-8">
         <a href="#about" class="text-base font-bold text-white hover:text-brand-gold transition-colors tracking-wide">ABOUT US</a>
+        <!-- NAV CHANGE 1: Added link to the new services section -->
         <a href="#services" class="text-base font-bold text-white hover:text-brand-gold transition-colors tracking-wide">SERVICES</a>
         <a href="#contact" class="px-7 py-3 rounded-full bg-gold-gradient text-brand-navy font-extrabold text-sm shadow-lg shadow-brand-gold/20 hover:scale-105 transition-all uppercase tracking-wide">
           Get a Quote
@@ -97,6 +96,7 @@
 
     <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-navy border-b border-brand-gold/20 p-4 flex flex-col space-y-4 lg:hidden shadow-2xl">
       <a href="#about" class="block text-center py-3 rounded-lg text-white font-bold hover:bg-white/5">ABOUT US</a>
+      <!-- NAV CHANGE 2: Added mobile link to the new services section -->
       <a href="#services" class="block text-center py-3 rounded-lg text-white font-bold hover:bg-white/5">SERVICES</a>
       <a href="#contact" class="block text-center py-3 bg-gold-gradient text-brand-navy font-bold rounded-lg shadow-lg uppercase">Get a Quote</a>
     </div>
@@ -129,7 +129,6 @@
 
       <div class="mt-16 mx-auto max-w-5xl relative">
         <div class="absolute inset-0 bg-brand-gold blur-[80px] opacity-10 -z-10"></div>
-        <!-- CHANGE 4: Updated src to use your file name -->
         <img src="corpo.jpg" alt="Outsourcing and its benefits diagram" class="rounded-xl border border-brand-gold/30 shadow-2xl w-full object-cover h-[450px] opacity-90">
       </div>
     </div>
@@ -141,7 +140,7 @@
         <div class="lg:w-1/2">
             <div class="relative">
                 <div class="absolute -inset-4 bg-brand-gold/20 blur-xl rounded-full"></div>
-                <!-- This image still uses a placeholder/external URL -->
+                <!-- Placeholder Image for Meeting section - you still need to replace this -->
                 <img src="https://images.unsplash.com" alt="Meeting" class="relative rounded-2xl shadow-2xl border border-white/10">
             </div>
         </div>
@@ -155,4 +154,86 @@
               For nearly two decades, we have stood by our motto, <em>"In Excellence We Trust."</em> Today, led by <strong>Aditya Mishra</strong>, we continue to expand our legacy, incorporating modern innovations while maintaining the values of integrity and professionalism.
             </p>
             <p>
-              We position ourselves as a one-stop business partner for SMEs, startups, and large enterprises. We understand that a one-person army cannot handle every business process. We take tha
+              We position ourselves as a one-stop business partner for SMEs, startups, and large enterprises. We understand that a one-person army cannot handle every business process. We take that burden off your shoulders.
+            </p>
+          </div>
+          
+          <div class="mt-8 grid grid-cols-3 gap-4 border-t border-white/5 pt-8">
+            <!-- Content here was truncated in user input -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- START OF NEW SERVICES SECTION -->
+  <section id="services" class="py-20 bg-brand-navy relative">
+    <div class="container mx-auto px-6">
+      <h2 class="font-heading text-4xl md:text-5xl font-bold text-center mb-12 text-white">
+        Services We Offer
+      </h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Item 1 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Complete Accounting Solutions</h3>
+          <p class="text-slate-400">Comprehensive management of all accounting needs, ensuring accuracy and compliance for your business growth.</p>
+        </div>
+
+        <!-- Service Item 2 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Online/Offline Tutoring</h3>
+          <p class="text-slate-400">Flexible educational support in various business disciplines, tailored for individual or corporate learning.</p>
+        </div>
+        
+        <!-- Service Item 3 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Document Drafting</h3>
+          <p class="text-slate-400">Professional preparation and drafting of legal, business, and administrative documents.</p>
+        </div>
+
+        <!-- Service Item 4 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Manpower Supply</h3>
+          <p class="text-slate-400">Providing skilled labor and personnel to meet your operational demands efficiently.</p>
+        </div>
+        
+        <!-- Service Item 5 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Hiring and Recruitment</h3>
+          <p class="text-slate-400">Streamlined hiring processes to attract, screen, and recruit the best talent for your team.</p>
+        </div>
+
+        <!-- Service Item 6 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Banking and Investment</h3>
+          <p class="text-slate-400">Expert guidance on banking operations, investment strategies, and financial management.</p>
+        </div>
+
+        <!-- Service Item 7 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Compliances and Duties Filing</h3>
+          <p class="text-slate-400">Ensuring adherence to all regulatory compliances and efficient handling of duty filings.</p>
+        </div>
+        
+        <!-- Service Item 8 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Logo/Advertisement Creation</h3>
+          <p class="text-slate-400">Creative design services for branding, logo creation, and impactful advertisement campaigns.</p>
+        </div>
+
+        <!-- Service Item 9 -->
+        <div class="bg-black/30 p-8 rounded-lg shadow-lg border border-brand-gold/10 hover:border-brand-gold/50 transition duration-300 transform hover:-translate-y-1">
+          <h3 class="text-xl font-heading font-semibold text-brand-gold mb-4">Licensing and Registration</h3>
+          <p class="text-slate-400">Assistance with all necessary business licensing, permits, and official registration processes.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- END OF NEW SERVICES SECTION -->
+  
+  <!-- The rest of your existing code continues here, including the contact section and footer... -->
+
+</body>
+</html>
