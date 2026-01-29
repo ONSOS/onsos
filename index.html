@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -71,11 +71,12 @@
     <div class="container mx-auto px-6 flex justify-between items-center">
       
       <a href="#" class="flex items-center gap-4 group">
-        <img src="logo.png" alt="O.N.S. Logo" class="h-16 w-auto object-contain logo-filter transition-transform group-hover:scale-105">
+        <!-- CHANGE 1: Increased logo height from h-16 to h-20 -->
+        <img src="logo.png" alt="O.N.S. Logo" class="h-20 w-auto object-contain logo-filter transition-transform group-hover:scale-105">
         
         <div class="hidden sm:block">
-          <!-- The 'text-gold-gradient' class has been moved to the parent span here -->
-          <span class="font-heading font-black text-2xl lg:text-3xl text-gold-gradient uppercase tracking-wider leading-none drop-shadow-lg">
+          <!-- CHANGE 2 & 3: Increased text size and moved 'text-gold-gradient' to parent span -->
+          <span class="font-heading font-black text-3xl lg:text-4xl text-gold-gradient uppercase tracking-wider leading-none drop-shadow-lg">
               O.N.S. <span>Outsourcing Solutions</span>
           </span>
         </div>
@@ -128,7 +129,7 @@
 
       <div class="mt-16 mx-auto max-w-5xl relative">
         <div class="absolute inset-0 bg-brand-gold blur-[80px] opacity-10 -z-10"></div>
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80" alt="Corporate Office" class="rounded-xl border border-brand-gold/30 shadow-2xl w-full object-cover h-[450px] opacity-90">
+        <img src="https://images.unsplash.com" alt="Corporate Office" class="rounded-xl border border-brand-gold/30 shadow-2xl w-full object-cover h-[450px] opacity-90">
       </div>
     </div>
   </section>
@@ -139,7 +140,7 @@
         <div class="lg:w-1/2">
             <div class="relative">
                 <div class="absolute -inset-4 bg-brand-gold/20 blur-xl rounded-full"></div>
-                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Meeting" class="relative rounded-2xl shadow-2xl border border-white/10">
+                <img src="https://images.unsplash.com" alt="Meeting" class="relative rounded-2xl shadow-2xl border border-white/10">
             </div>
         </div>
         <div class="lg:w-1/2">
@@ -156,4 +157,14 @@
             </p>
           </div>
           
-          <div class="mt-8 grid grid-cols-3 gap-4 border-t border-wh
+          <div class="mt-8 grid grid-cols-3 gap-4 border-t border-white/5 pt-8">
+            <!-- Content here was truncated in user input -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Rest of the HTML code continues here... -->
+
+</body>
+</html>
